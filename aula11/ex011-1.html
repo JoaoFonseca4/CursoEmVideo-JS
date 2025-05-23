@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div>
+        <h1>Verificador de Brasileiro</h1>
+        <input type="text" id="país" placeholder="Digite sua nacionalidade">
+        <input type="button" id="ver" value="Verificar" onclick="verificar()">
+    </div>
+    <div id="res">
+        resultado
+    </div>
+
+    <script>
+
+        function verificar(){
+        var país = window.document.getElementById('país')
+        var res = window.document.getElementById('res')
+        var pa = (país.value)
+            
+        res.innerHTML = `<p>Você é do(a) ${pa}</p>`
+        
+        if(pa == 'Brasil'){
+            res.innerHTML += 'Você é Brasileiro'
+        } else{
+            res.innerHTML += 'Você é estrangeiro'
+        }
+
+        } 
+
+    </script>
+  </body>
+</html>
